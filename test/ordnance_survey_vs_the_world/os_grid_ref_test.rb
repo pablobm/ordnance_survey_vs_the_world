@@ -22,12 +22,19 @@ module OrdnanceSurveyVsTheWorld
       [ll.lat, ll.lon]
     end
 
-#    def test_to_latlon
-#      assert_equal([49.76618579670919, -7.556448482562568], latlon(0, 0))
-#      assert_equal([49.82444269457118,  2.171856193294114], latlon(699999, 0))
-#      assert_equal([61.37589692662293, -9.496595230094060], latlon(0, 1299999))
-#      assert_equal([49.82444269457118,  2.171856193294114], latlon(699999, 1299999))
-#    end
+    def test_to_latlon
+      assert_all_in_delta([49.76618579670919, -7.556448482562568], latlon(0, 0), 0.00001)
+      assert_all_in_delta([49.82444269457118,  2.171856193294114], latlon(699999, 0), 0.00001)
+      assert_all_in_delta([61.37589692662293, -9.496595230094060], latlon(0, 1299999), 0.00001)
+      assert_all_in_delta([61.46605926424626 ,3.6348831054430324], latlon(699999, 1299999), 0.00001)
+    end
+
+
+    def assert_all_in_delta(a1, a2, delta)
+      a1.each_with_index do |e, i|
+        assert_in_delta(e, a2[i], delta)
+      end
+    end
 
   end
 end
