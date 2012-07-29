@@ -7,6 +7,8 @@ Google Maps and all that stuff).
 
 # How to use
 
+    require 'ordnance_survey_vs_the_world'
+
     easting = 531182
     northing = 182409
     gr = OrdnanceSurveyVsTheWorld::OSGridRef.new(easting, northing)

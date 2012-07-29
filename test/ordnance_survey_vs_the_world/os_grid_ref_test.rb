@@ -1,6 +1,6 @@
 require 'test/unit'
 require 'test/unit/assertions'
-require 'ordnance_survey_vs_the_world/os_grid_ref'
+require 'ordnance_survey_vs_the_world'
 
 module OrdnanceSurveyVsTheWorld
   class OsGridRefTest < Test::Unit::TestCase
