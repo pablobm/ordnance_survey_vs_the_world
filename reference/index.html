@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Convert from Ordnance Survey easting/northing to longitude/latitude</title>
+</head>
+<body>
+
+<form>
+  <p>Easting <input name="easting" type="text"></p>
+  <p>Northing <input name="northing" type="text"></p>
+  <p><input id="button" type="button" value="Convert"></p>
+  <p id="result"></p>
+</form>
+
+</body>
+<script src="./osgridref.js"></script>
+<script>
+document.getElementById('button').onclick = function () {
+  var form = document.forms[0]
+  var easting = form.easting.value
+  var northing = form.northing.value
+
+  var latlon = OsGridRef.osGridToLatLong({easting: easting, northing: northing})
+
+  document.getElementById('result').innerHTML = latlon.lat + ' ,' + latlon.lon
+}
+</script>
+</html>
