@@ -1,3 +1,13 @@
+# Extracted from code by Chris Veness, who kindly published it under
+# the CC-BY license (http://creativecommons.org/licenses/by/3.0/) with
+# the request that the below copyright notice is retained.
+#
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#  ordnance survey grid reference functions  (c) chris veness 2005-2012
+#   - www.movable-type.co.uk/scripts/gridref.js
+#   - www.movable-type.co.uk/scripts/latlon-gridref.html
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 require 'ordnance_survey_vs_the_world/lat_lon'
 
 module OrdnanceSurveyVsTheWorld
